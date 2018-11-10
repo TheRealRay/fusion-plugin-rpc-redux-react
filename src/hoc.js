@@ -32,7 +32,6 @@ export const withRPCReactor = (
   return withRPCRedux(rpcId, {
     actions: createRPCReactors(rpcId, reducers),
     propName,
-    rpcId,
     transformParams,
     mapStateToParams,
   });
@@ -47,7 +46,7 @@ export function withRPCRedux(
     mapStateToParams,
   }: {
     propName?: string,
-    actions: any,
+    actions?: any,
     transformParams?: (params: any) => any,
     mapStateToParams?: (state: any) => any,
   } = {}
